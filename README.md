@@ -15,6 +15,4 @@ To convert to Google Doc (https://docs.google.com/document/d/1jPzNP26Kd6tt8FTCHb
 
 To generate Markdown for wiki:
 
-1. Open output.csv
-1. Copy/paste into output.md, replacing contents except header.
-1. Replace \t with pipe, then use multiselect to add pipes to start and end of line.
+1. Run script as `ruby process.rb md`.

@@ -1,5 +1,3 @@
-See what's on: https://tvguide.com/listings
-
 |Name|Number|
 |---|---|
 | 3ABN (Three Angels) | 1677 |

@@ -45,6 +45,7 @@ SUBS = {
 }
 
 channels = {}
+format = ARGV[0] || "csv"
 
 CSV.foreach("input.csv") do |row|
   channels[row[1]] = row[0].to_i
@@ -64,6 +65,11 @@ channels.keys.each do |chan|
   end
 end
 
+if format == "md"
+  puts "|Name|Number|"
+  puts "|---|---|"
+end
+
 channels.keys.sort_by(&:downcase).each do |chan|
-  puts "#{chan},#{channels[chan]}"
+  puts format == "md" ? "| #{chan} | #{channels[chan]} |" : "#{chan},#{channels[chan]}"
 end
