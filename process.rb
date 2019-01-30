@@ -5,7 +5,7 @@ require "pp"
 # Doublecheck this is still true before each run.
 ADDITIONS = {
   "BTN HD" => 256,
-  "BTN + HD" => 264
+  "BTN+ HD" => 264
 }
 
 DONT_SWAP = ["OWN (Oprah Winfrey Network)", "Home Preview Channel (Detroit)"]
@@ -41,10 +41,11 @@ SUBS = {
   "WXYZ Bounce TV" => "Bounce TV",
   "WMYD AntennaTV" => "AntennaTV",
   "WJBk Heroes & Icons" => "Heroes & Icons",
-  "WDIV MeTV" => "MeTV"
+  "WDIV MeTV" => "MeTV",
+  "FOX Sports Detroit + HD" => "FOX Sports Detroit+ HD"
 }
 
-channels = {}
+channels = ADDITIONS.dup
 format = ARGV[0] || "csv"
 
 CSV.foreach("input.csv") do |row|
